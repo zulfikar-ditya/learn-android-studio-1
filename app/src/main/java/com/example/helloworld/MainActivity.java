@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     angkaPertama = Integer.parseInt(angkaPertamaString);
                     angkaKedua = Integer.parseInt(angkaKeduaString);
-                } catch (Exception) {
-                    Toast.makeText(MainActivity.this, "Masukkan angka dengan benar!!!", Toast.LENGTH_SHORT).show();
+                } catch (Exception e) {
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
 
                 TextView result = findViewById(R.id.result);
