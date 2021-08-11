@@ -26,16 +26,14 @@ public class MainActivity extends AppCompatActivity {
 
                 String angkaPertamaString = AngkaPertama.getText().toString();
                 String angkaKeduaString = AngkaKedua.getText().toString();
-
-                int angkaPertama = Integer.parseInt(angkaPertamaString);
-                int angkaKedua = Integer.parseInt(angkaKeduaString);
-
-                System.out.println("\n");
-                System.out.println("\n");
-                System.out.println(angkaPertama);
-                System.out.println(angkaKedua);
-                System.out.println("\n");
-                System.out.println("\n");
+                int angkaPertama = 0;
+                int angkaKedua = 0;
+                try {
+                    angkaPertama = Integer.parseInt(angkaPertamaString);
+                    angkaKedua = Integer.parseInt(angkaKeduaString);
+                } catch (Exception) {
+                    Toast.makeText(MainActivity.this, "Masukkan angka dengan benar!!!", Toast.LENGTH_SHORT).show();
+                }
 
                 TextView result = findViewById(R.id.result);
                 int res = angkaPertama + angkaKedua;
